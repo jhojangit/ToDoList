@@ -5,10 +5,9 @@
     justify-content: space-between;
     border-radius: 1rem;
     gap: 2rem;
-    width: 400px;
+    width: 380px;
     height: auto;
     min-height: 50px;
-    max-width: 800px;
     color: aliceblue;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -63,9 +62,8 @@
     border: none;
     color: aliceblue;
     outline: none;
-    width: 250px;
+    width: 160px;
     cursor: text;
-
 }
 
 .local__form-input::placeholder{
@@ -79,3 +77,20 @@
 }
 
 
+
+@media(min-width: 360px){
+    .local__container{
+        width: 300px;
+    }
+}
+
+
+@media(min-width: 450px){
+    .local__container{
+        width: 450px;
+    }
+
+    .local__form-input{
+        width: 310px;
+    }
+}

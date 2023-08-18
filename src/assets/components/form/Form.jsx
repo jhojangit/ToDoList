@@ -37,9 +37,11 @@ const Form = ({ handleNewUser }) => {
 
     const handleClear = (e) => {
         e.preventDefault()
-        if(e.target.id.value.length != 0){
+        let value = e.target.id.value
+        if(value.length > 0){
             e.target.id.value = ""
         }
+        handleNewUser(true)
     }
 
 
@@ -52,7 +54,7 @@ const Form = ({ handleNewUser }) => {
 
     return (
         <form className='form' onSubmit={handleSubmit} action="">
-            <input className='form__input' type="text" id="id" autoComplete='off' placeholder='Create a new ToDo' />
+            <input className='form__input' type="text" id="id" autoComplete='off' placeholder='Create a new ToDo' autoFocus />
             <div className="form__btns">
                 <input className='form__btn-create' type="submit" value="Create" />
                 <form onSubmit={handleClear} action="">
