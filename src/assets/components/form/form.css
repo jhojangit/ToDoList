@@ -1,0 +1,77 @@
+
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    max-width: 500px;
+    align-items: center;
+}
+
+
+.form__input{
+    background-color: var(--colorSecundary);
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    border: transparent;
+    border-radius: 1rem;
+    color: aliceblue;
+    text-align: center;
+    cursor: text;
+    outline: none;
+}
+
+.form__input::placeholder{
+    color: rgba(240, 248, 255, 0.76);
+}
+
+.form__btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+
+.form__btn-create{
+    padding: .5rem;
+    border-radius: 1rem;
+    border: transparent;
+    background-color: var(--greenPrincipal);
+    color: aliceblue;
+    transition: background-color 300ms;
+}
+
+.form__btn-create:hover{
+    background-color: var(--greenSecundary);
+}
+
+
+
+.form__btn-clear{
+    padding: .5rem;
+    border-radius: 1rem;
+    border: transparent;
+    background-color: var(--yellowPrincipal);
+    color: aliceblue;
+}
+
+.form__btn-clear:hover{
+    background-color: var(--yellowSecundary);
+}
+
+.form__btn-delete{
+    padding: .5rem;
+    border-radius: 1rem;
+    border: transparent;
+    background-color: var(--redPrincipal);
+    color: aliceblue;
+    max-width: 10rem;
+    margin-top: 1rem;
+}
+
+.form__btn-delete:hover{
+    background-color: var(--redSecundary);
+}

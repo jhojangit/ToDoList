@@ -1,0 +1,81 @@
+.local__container{
+    background-color: var(--colorSecundary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1rem;
+    gap: 2rem;
+    width: 400px;
+    height: auto;
+    min-height: 50px;
+    max-width: 800px;
+    color: aliceblue;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.local__data{
+    font-weight: 400;
+    width: 100%;
+}
+
+.local__btns{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.local__form-delete{
+    width: 65px;
+    background-color: var(--redPrincipal);
+    color: aliceblue;
+}
+
+.local__form-delete:hover{
+    background-color: var(--redSecundary);
+}
+
+.local__form-update{
+    width: 65px;
+    background-color: var(--yellowPrincipal);
+    color: aliceblue;
+}
+
+.local__form-update:hover{
+    background-color: var(--yellowSecundary);
+}
+
+
+.local__form{
+    position: absolute;
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.local__form-input{
+    background-color: var(--colorPrincipla);
+    border: none;
+    color: aliceblue;
+    outline: none;
+    width: 250px;
+    cursor: text;
+
+}
+
+.local__form-input::placeholder{
+    color: rgb(169, 173, 177);
+}
+
+.local__form-updateFull{
+    background-color: var(--greenPrincipal);
+    color: aliceblue;
+    width: 100px;
+}
+
+
