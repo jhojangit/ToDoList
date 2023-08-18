@@ -2,7 +2,6 @@
     background-color: var(--colorSecundary);
     display: flex;
     align-items: center;
-    justify-content: space-between;
     border-radius: 1rem;
     gap: 2rem;
     width: 380px;

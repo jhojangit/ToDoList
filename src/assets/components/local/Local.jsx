@@ -29,6 +29,7 @@ const Local = ({ data, deleteUser }) => {
         }
 
     }
+    
 
     return (
         <div className='local__container'>
@@ -38,9 +39,8 @@ const Local = ({ data, deleteUser }) => {
                 update?
                 
                     <form  className='local__form' onSubmit={handleUpdateUser} action="">
-                        <input className='local__form-input' type="text" id="idValue" autoComplete='off' autoFocus  placeholder={data[1]}/>
+                        <input className='local__form-input' type="text" id="idValue"  autoComplete='off'  defaultValue={data[1]}   />
                         <input className='local__form-updateFull' type="submit" value="confirm" />
-                        
                     </form>
                 
 
@@ -48,8 +48,8 @@ const Local = ({ data, deleteUser }) => {
                 
                 <div className="local__btns">
                     <p className='local__data'>{data[1]}</p>
-                    <button className='local__form-update' onClick={handleUpdate}><i class='bx bx-edit-alt'></i></button>
-                    <button className='local__form-delete' onClick={handleSelect}><i class='bx bx-trash'></i></button>
+                    <button className='local__form-update' onClick={handleUpdate}><i className='bx bx-edit-alt'></i></button>
+                    <button className='local__form-delete' onClick={handleSelect}><i className='bx bx-trash'></i></button>
                 </div>
                 
             }

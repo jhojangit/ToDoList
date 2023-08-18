@@ -33,18 +33,7 @@ const Form = ({ handleNewUser }) => {
 
     }
 
-
-
-    const handleClear = (e) => {
-        e.preventDefault()
-        let value = e.target.id.value
-        if(value.length > 0){
-            e.target.id.value = ""
-        }
-        handleNewUser(true)
-    }
-
-
+    
 
     const handleDelete = () => {
         localStorage.clear()
@@ -57,9 +46,7 @@ const Form = ({ handleNewUser }) => {
             <input className='form__input' type="text" id="id" autoComplete='off' placeholder='Create a new ToDo' autoFocus />
             <div className="form__btns">
                 <input className='form__btn-create' type="submit" value="Create" />
-                <form onSubmit={handleClear} action="">
-                    <input className='form__btn-clear' type="submit" value="Clear " ></input>
-                </form>
+
             </div>
 
             <button className='form__btn-delete' onClick={handleDelete}>Delete all tasks</button>
