@@ -39,7 +39,7 @@ const Local = ({ data, deleteUser }) => {
                 update?
                 
                     <form  className='local__form' onSubmit={handleUpdateUser} action="">
-                        <input className='local__form-input' type="text" id="idValue"  autoComplete='off'  defaultValue={data[1]}   />
+                        <input className='local__form-input' type="text" id="idValue"  autoComplete='off' autoFocus defaultValue={data[1]}   />
                         <input className='local__form-updateFull' type="submit" value="confirm" />
                     </form>
                 
