@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import Local from '../local/Local';
 import "./list.css"
 
-const List = ({newUser, restarNewUser, deleteUser}) => {
+const List = ({newUser, restarNewReminder, deleteReminder}) => {
 
     
 
     useEffect(() => {
-        restarNewUser(false)
+        restarNewReminder(false)
 
     }, [newUser]);
 
@@ -16,10 +16,11 @@ const List = ({newUser, restarNewUser, deleteUser}) => {
 
     let allData = Object.entries(localStorage).sort((a,b) => a[0]-b[0])
 
-
-
+    
+    
+    
     allData = allData.filter(a => a[0]>=0)
-
+    
 
     return (
         <div>
@@ -32,12 +33,12 @@ const List = ({newUser, restarNewUser, deleteUser}) => {
                     <Local
                     key={elements}
                     data = {elements}
-                    deleteUser = {deleteUser}
+                    deleteReminder = {deleteReminder}
                     />
                 ))
             }
             
-            <p className='all__data-length'>You have {allData.length} task</p>
+            <p className='all__data-length'>You have {allData.length} reminders</p>
         
 
         </div>

@@ -8,17 +8,17 @@ function App() {
 
   const [newUser, setnewUser] = useState(false);
 
-  const handleNewUser = () => {
+  const handleNewReminder = () => {
     setnewUser(true)
   }
 
 
-  const restarNewUser = () => {
+  const restarNewReminder = () => {
     setnewUser(false)
   }
 
 
-  const deleteUser = () => {
+  const deleteReminder = () => {
     setnewUser(true)
 
   }
@@ -32,13 +32,13 @@ function App() {
 
     <div className="main">
 
-      <h1 style={{color: "white", fontSize:"2rem"}}>My ToDo list</h1>
-      <Form handleNewUser={handleNewUser} />
+      <h1 style={{color: "white", fontSize:"2rem"}}>My Reminders</h1>
+      <Form handleNewReminder={handleNewReminder} />
 
       <List
-        restarNewUser={restarNewUser}
+        restarNewReminder={restarNewReminder}
         newUser={newUser}
-        deleteUser={deleteUser}
+        deleteReminder={deleteReminder}
       />
 
     </div>

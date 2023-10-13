@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./local.css"
 
-const Local = ({ data, deleteUser }) => {
+const Local = ({ data, deleteReminder }) => {
 
 
     const [update, setUpdate] = useState(false);
@@ -9,25 +9,30 @@ const Local = ({ data, deleteUser }) => {
 
     const handleSelect = () => {
         localStorage.removeItem(data[0])
-        deleteUser(true)
+        deleteReminder(true)
 
     }
 
     const handleUpdate = () => {
 
         setUpdate(true)
+
     }
 
 
-    const handleUpdateUser = e => {
 
+    const handleUpdateReminder = e => {
+        e.preventDefault()
+        
         if(e.target.idValue.value.length>0){
-
+            
             localStorage.setItem(data[0], e.target.idValue.value)
-            deleteUser(true)
+            deleteReminder(true)
+            setUpdate(false)
 
+            
         }
-
+        
     }
     
 
@@ -38,7 +43,7 @@ const Local = ({ data, deleteUser }) => {
             {
                 update?
                 
-                    <form  className='local__form' onSubmit={handleUpdateUser} action="">
+                    <form  className='local__form' onSubmit={handleUpdateReminder} action="">
                         <input className='local__form-input' type="text" id="idValue"  autoComplete='off' autoFocus defaultValue={data[1]}   />
                         <input className='local__form-updateFull' type="submit" value="confirm" />
                     </form>

@@ -3,7 +3,7 @@ import "./form.css"
 
 
 
-const Form = ({ handleNewUser }) => {
+const Form = ({ handleNewReminder }) => {
 
 
     const handleSubmit = e => {
@@ -26,7 +26,7 @@ const Form = ({ handleNewUser }) => {
             }
 
 
-            handleNewUser(true)
+            handleNewReminder(true)
 
             e.target.id.value = ""
         }
@@ -37,19 +37,19 @@ const Form = ({ handleNewUser }) => {
 
     const handleDelete = () => {
         localStorage.clear()
-        handleNewUser(true)
+        handleNewReminder(true)
     }
 
 
     return (
         <form className='form' onSubmit={handleSubmit} action="">
-            <input className='form__input' type="text" id="id" autoComplete='off' placeholder='Create a new ToDo' autoFocus />
+            <input className='form__input' type="text" id="id" autoComplete='off' placeholder='Create a new reminder' autoFocus />
             <div className="form__btns">
                 <input className='form__btn-create' type="submit" value="Create" />
 
             </div>
 
-            <button className='form__btn-delete' onClick={handleDelete}>Delete all tasks</button>
+            <button className='form__btn-delete' onClick={handleDelete}>Delete all reminders</button>
 
 
         </form>
