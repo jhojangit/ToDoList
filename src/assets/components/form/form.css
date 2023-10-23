@@ -75,3 +75,23 @@
 .form__btn-delete:hover{
     background-color: var(--redSecundary);
 }
+
+
+.deleteAll__form{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.deleteAll__form-text{
+    color: rgb(245, 241, 241);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.deleteAll__form-btn{
+    margin: 1rem;
+}
+
+.deleteAll__form-btn:hover{
+    background-color: var(--colorSecundary);
+    color: aliceblue;
+}

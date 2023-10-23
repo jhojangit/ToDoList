@@ -1,9 +1,18 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import "./form.css"
 
 
 
 const Form = ({ handleNewReminder }) => {
+
+
+    const [confirm, setConfirm] = useState(false)
+    const [localData, setLocalData] = useState(false)
+
+
+    useEffect(() => {
+        localStorage.getItem(0) ?setLocalData(true) :setLocalData(false)
+    }, [confirm])
 
 
     const handleSubmit = e => {
@@ -14,6 +23,7 @@ const Form = ({ handleNewReminder }) => {
 
             if (count == 0) {
                 localStorage.setItem(0, e.target.id.value)
+                setLocalData(true)
             }
 
 
@@ -35,10 +45,24 @@ const Form = ({ handleNewReminder }) => {
 
     
 
+    const handleDeleteOpen = () => {
+
+        setConfirm(true)
+
+    }
+
+    const handleDeleteClose = () => {
+        setConfirm(false)
+    }
+
     const handleDelete = () => {
         localStorage.clear()
         handleNewReminder(true)
+        setConfirm(false)
+
     }
+
+
 
 
     return (
@@ -49,8 +73,22 @@ const Form = ({ handleNewReminder }) => {
 
             </div>
 
-            <button className='form__btn-delete' onClick={handleDelete}>Delete all reminders</button>
+            {
 
+               localData && <button className='form__btn-delete' onClick={handleDeleteOpen}>Delete all reminders</button>
+            }
+
+
+            {
+                confirm && 
+
+                <section className='deleteAll__form'>
+                    <strong className='deleteAll__form-text'>Are you sure you want to delete everything?</strong>
+                    <button className='deleteAll__form-btn' onClick={handleDelete}>Yes</button>
+                    <button className='deleteAll__form-btn' onClick={handleDeleteClose}>No</button>
+                </section>
+
+            }
 
         </form>
     )
