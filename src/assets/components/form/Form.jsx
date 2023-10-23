@@ -69,13 +69,12 @@ const Form = ({ handleNewReminder }) => {
         <form className='form' onSubmit={handleSubmit} action="">
             <input className='form__input' type="text" id="id" autoComplete='off' placeholder='Create a new reminder' autoFocus />
             <div className="form__btns">
-                <input className='form__btn-create' type="submit" value="Create" />
+                <input className='form__btn-create' type="submit" value="Create" required={true} />
 
             </div>
 
             {
-
-               localData && <button className='form__btn-delete' onClick={handleDeleteOpen}>Delete all reminders</button>
+                localData && <button className='form__btn-delete' onClick={handleDeleteOpen}>Delete all reminders</button>
             }
 
 
@@ -83,7 +82,7 @@ const Form = ({ handleNewReminder }) => {
                 confirm && 
 
                 <section className='deleteAll__form'>
-                    <strong className='deleteAll__form-text'>Are you sure you want to delete everything?</strong>
+                    <strong className='deleteAll__form-text'>Are you sure you want to delete?</strong>
                     <button className='deleteAll__form-btn' onClick={handleDelete}>Yes</button>
                     <button className='deleteAll__form-btn' onClick={handleDeleteClose}>No</button>
                 </section>
