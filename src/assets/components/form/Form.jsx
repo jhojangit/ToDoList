@@ -46,9 +46,7 @@ const Form = ({ handleNewReminder }) => {
     
 
     const handleDeleteOpen = () => {
-
         setConfirm(true)
-
     }
 
     const handleDeleteClose = () => {
@@ -70,7 +68,6 @@ const Form = ({ handleNewReminder }) => {
             <input className='form__input' type="text" id="id" autoComplete='off' placeholder='Create a new reminder' autoFocus />
             <div className="form__btns">
                 <input className='form__btn-create' type="submit" value="Create" required={true} />
-
             </div>
 
             {

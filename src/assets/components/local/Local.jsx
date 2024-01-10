@@ -6,17 +6,16 @@ const Local = ({ data, deleteReminder }) => {
 
     const [update, setUpdate] = useState(false);
 
+    
+
 
     const handleSelect = () => {
         localStorage.removeItem(data[0])
         deleteReminder(true)
-
     }
 
     const handleUpdate = () => {
-
         setUpdate(true)
-
     }
 
 

@@ -4,7 +4,6 @@ import "./list.css"
 
 const List = ({newUser, restarNewReminder, deleteReminder}) => {
 
-    
 
     useEffect(() => {
         restarNewReminder(false)
@@ -13,19 +12,14 @@ const List = ({newUser, restarNewReminder, deleteReminder}) => {
 
 
 
+    let allData = Object.entries(localStorage).sort((a,b) => b[0]-a[0])
 
-    let allData = Object.entries(localStorage).sort((a,b) => a[0]-b[0])
 
-    
-    
-    
     allData = allData.filter(a => a[0]>=0)
     
 
     return (
         <div>
-
-
 
 
             {
@@ -39,7 +33,6 @@ const List = ({newUser, restarNewReminder, deleteReminder}) => {
             }
             
             <p className='all__data-length'>You have {allData.length} reminders</p>
-        
 
         </div>
     )
